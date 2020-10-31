@@ -1,0 +1,47 @@
+version: '3'
+services:
+  #vim:
+  #  tty: true
+  #  build: 
+  #    context: ./vim
+  #    dockerfile: Dockerfile
+  #  container_name: myvim
+  #  ports:
+  #    - "40:40"
+  #  #volumes: 
+  #  #  - /home/brun/cloudInfra/docker/rendu:/app
+  #  networks: 
+  #    - backend
+
+  web:
+    build: 
+      context: ./python
+      dockerfile: Dockerfile
+    container_name : myflask
+    links:
+      - redis
+    ports:
+      - "80:80"
+    networks:
+      - backend
+    volumes:
+      - ./python:/app
+    restart: always
+
+  redis:
+    image: redis:latest
+    container_name : myredis
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.10.1/22
+
+#volumes:
+#  myapp:
+
+#  #docker run -it -v /home/brun/cloudInfra/docker/rendu:/app jess/sublime-text-3 /bin/bash

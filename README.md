@@ -1,11 +1,15 @@
 # docker-compose
 
-## To run the application :
+#### Components :
+
+- a flask application
+- a redis database
+
+#### To run the application :
 
 $ docker-compose up
 
-
-## Instructions : 
+#### Instructions : 
 
 In this exercise you are going to set up a development stack infrastructure. This means that you
 will configure a container as a platform for testing your code, and you will develop your code

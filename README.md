@@ -2,7 +2,7 @@
 
 #### Components :
 
-- a flask application
+- a flask web application
 - a redis database
 
 #### To run the application :

@@ -9,10 +9,9 @@
 
 $ docker-compose up
 
-#### Instructions : 
+#### Descriptions : 
 
-In this exercise you are going to set up a development stack infrastructure. This means that you
-will configure a container as a platform for testing your code, and you will develop your code
-somewhere else (e.g. your laptop or another container).
+Set up a development stack infrastructure. Configure a container as a platform for testing my code, and develop my code
+somewhere else (e.g. my laptop or another container).
 
 Brun Justine 2020
